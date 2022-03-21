@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var citationRouter = require('./routes/citation');
+var aboutRouter = require('./routes/about');
+var researchRouter = require('./routes/research');
 
 var app = express();
 
@@ -14,6 +16,8 @@ var app = express();
 app.set('views',
 	path.join(__dirname, 'views'),
 	path.join(__dirname, 'views', 'citation'),
+	path.join(__dirname, 'views', 'about'),
+	path.join(__dirname, 'views', 'research'),
 );
 app.set('view engine', 'jade');
 
@@ -26,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/citation', citationRouter);
+app.use('/about', aboutRouter);
+app.use('/research', researchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
