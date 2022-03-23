@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    h1.center= title
+    form(method='get', action='/search').center
+        div.search-container.center-horizontal
+            input(type='text', name='q', placeholder='Search').searchbar
+            svg(width="20", height="20").searchicon.center-vertical
+                path(fill="#555", d="m19.76,18.56l-5.74,-5.74c1.14, \
+                        -1.36 1.81,-3.09 1.81,-4.99c0, \
+                        -4.33 -3.56,-7.84 -7.92,-7.84s-7.92, \
+                        3.52 -7.92,7.85s3.56,7.84 7.92, \
+                        7.84c1.85,0 3.56,-0.63 4.92, \
+                        -1.7l5.76,5.76c0.33,0.33 0.84, \
+                        0.33 1.17,0c0.33,-0.33 0.33, \
+                        -0.84 0,-1.17l0.01,-0.01l-0.01, \
+                        0zm-18.08,-10.73c0,-3.39 2.8, \
+                        -6.15 6.24,-6.15s6.24,2.76 6.24, \
+                        6.15s-2.8,6.15 -6.24,6.15s-6.24, \
+                        -2.77 -6.24,-6.15z")
+        div.advanced-search-container.center-horizontal
+            h4 Advanced Search Options
+            input(type='text', name='q', placeholder='Author[s]').advancedsearchbar
