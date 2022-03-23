@@ -1,18 +1,13 @@
-*, html {
-	margin: 0;
-	padding: 0;
-}
-
-
+*,    html { margin: 0; padding: 0; }
 html, body {
 	height: 100%;
+	/* min-height: 100%; */
 }
 
 body {
 	font-family: 'Roboto Slab', serif;
 	font: 14px "Roboto Slab", serif;
 	color: #666;
-	height: 100%;
 	display: grid;
 	grid-template-areas: 'header' 'content' 'footer';
 	grid-template-rows: min-content 1fr min-content;
@@ -36,6 +31,10 @@ a {
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
+}
+
+.center {
+	text-align: center;
 }
 
 /* navbar */
@@ -176,6 +175,41 @@ a {
 	bottom: 10px;
 }
 
+/* search */
+
+.search-container {
+	display: grid;
+	grid-template-rows: 'search-input' 'search-icon';
+	grid-template-columns: 1fr min-content;
+	width: 50%;
+	height: 40px;
+	margin: 24px;
+	line-height: 40px;
+	border: 1px solid #e5e5e5;
+	border-radius: 16px;
+}
+
+.searchbar {
+	grid-row: search-input;
+	height: 40px;
+	padding: 0 16px;
+	border: none;
+	border-radius: 16px;
+	font-size: 16px;
+	font-family: 'Roboto Slab', serif;
+	color: #666;
+	outline: #777;
+	float: left;
+}
+
+.searchicon {
+	grid-row: search-icon;
+	width: 20px;
+	height: 20px;
+	padding-right: 12px;
+	color:#9aa0a6;
+}
+
 .hidden-link {
 	color: #666;
 	text-decoration: none;
@@ -188,6 +222,10 @@ a {
 
 .center-horizontal {
 	margin: 0px auto;
+}
+
+.center-vertical {
+	margin: auto 0;
 }
 
 .left {

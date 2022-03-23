@@ -1,0 +1,102 @@
+.paper-container {
+    display: grid;
+    grid-template-areas: 'toc' 'doc' 'other';
+    grid-template-columns: 20% 60% 20%;
+    position: relative;
+}
+
+.table-of-contents {
+    grid-area: 'toc';
+    margin-right: 10px;
+    padding: 0.5em;
+    border-right: 1px solid #e5e5e5;
+    position: sticky;
+    top: 32px;
+    align-self: start;
+}
+
+.table-of-contents li {
+    list-style: none;
+}
+
+.table-of-contents a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+}
+
+.document-container {
+    grid-area: 'doc';
+    display: table;
+    margin: 16px auto;
+}
+
+.document-sections {
+    display: table-row;
+    float: left;
+    margin-top: 16px;
+    padding: 0 16px;
+    border-top: 1px solid #e5e5e5;
+    hyphens: auto;
+}
+
+.doc-text {
+    text-align: justify;
+    font-size: 18px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.other {
+    grid-area: 'other';
+    margin-left: 10px;
+    padding: 0.5em;
+    border-left: 1px solid #e5e5e5;
+    position: sticky;
+    top: 32px;
+    align-self: start;
+}
+
+h1.heading {
+    display: table-cell;
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #666;
+    text-align: center;
+    padding-top: 8px;
+}
+
+h2.heading {
+    display: table-cell;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #666;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+
+h3.heading {
+    display: table-cell;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #666;
+    text-align: center;
+}
+
+.cite-button {
+    display: table-cell;
+    width: 96px;
+    height: 32px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    background-color: #00B7FF;
+}

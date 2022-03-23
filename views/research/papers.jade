@@ -1,3 +1,34 @@
 extends ../layout
 
 block content
+    link(rel='stylesheet', href='/stylesheets/research.css')
+    h1.center= title
+    div.paper-container
+        div.table-of-contents
+            h2 Table of Contents
+            ul
+                each section in paper.sections
+                    li
+                        a(href='#' + section.title.replace(/\s/g, '').toLowerCase(),
+                          style="padding-left:" + section.level * 16 + "px")= section.title
+        div.document-container
+            h1 #{paper.title}
+            h2 #{paper.authors}
+            h4 #{paper.year}
+            h2 #{paper.abstract}
+            div.document-sections
+                each section in paper.sections
+                    h2.heading(id=section.title.replace(/\s/g, '').toLowerCase()) #{section.title}
+                    p.doc-text #{section.content}
+            div.literature
+                h2.heading Literature
+                //- p.doc-text #{paper.literature}
+        div.other
+            h2 Other
+            div.cite-container
+                //- onclick: show popup
+                button.cite-button(onclick="showPopup()")
+                    i.fa.fa-quote-left
+                    span.cite-text Cite
+
+            
