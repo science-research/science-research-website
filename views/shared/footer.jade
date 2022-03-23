@@ -18,6 +18,19 @@ div.footer
             a(href='/research/software') Software
       div.footer-category
         h1.footer-category-title
+          a(href='/categories')
+            | Categories
+        ul.footer-category-list
+          li.footer-category-item
+            a(href='/categories/') Math
+          li.footer-category-item
+            a(href='/categories/') Physics
+          li.footer-category-item
+            a(href='/categories/') Chemistry
+          li.footer-category-item
+            a(href='/categories/') Biology
+      div.footer-category
+        h1.footer-category-title
           a(href='/docs') Docs
         ul.footer-category-list
           li.footer-category-item
@@ -47,4 +60,11 @@ div.footer
     p.copyright-text
       | Copyright &copy; 2022 Science Research & 
       a(href="https://lucalewin.dev").hidden-link Luca Lewin
-    p.all-rights-reserved-text All rights reserved
+      br
+      | All rights reserved.
+  div.important.center
+    p(style="color:red").important-text
+      | This website is in early development.
+      | If you have any questions, please create an issue on 
+      a(href="https://github.com/science-research/science-research-website/issues") GitHub
+      | .
